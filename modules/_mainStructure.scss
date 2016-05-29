@@ -1,0 +1,20 @@
+﻿.app-content{
+    @include absoluteFullSize(0,0,0,0);
+    background: color("grey", "darken-4");
+
+    .menu-bar{
+        @include absoluteFullSize(0,"", 0, 0);
+        width: $menuBarW;
+
+        nav.main-nav {
+            @include absoluteFullSize($oBtnNormalH,"", $oBtnNormalH, 0);
+        }
+
+    }
+
+    #mainArea {
+
+    }
+
+}
+
