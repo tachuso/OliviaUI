@@ -379,7 +379,19 @@ $colors: (
                     &-hover-#{$color_class}:hover,
                     &-active-#{$color_class}:active,
                     &-focus-#{$color_class}:focus {
-                        background-color: $color_value !important;
+                         @if $layer == "bg" {
+                            background-color: $color_value !important;
+                        }
+                        @else if $layer == "text" {
+                            color: $color_value !important;
+                        }
+                        @else if $layer == "bd" {
+                            border-color: $color_value !important;
+                        }
+                        @else if $layer == "outline" {
+                            outline-color: $color_value !important;
+                        }
+                        
                     }
                 }
             }
